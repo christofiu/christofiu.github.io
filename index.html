@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="index.js"></script>
+        <script src="bd.js"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header>
+            <!-- header -->
+            <h1>Christopher C. Santos</h1>
+        </header>
+        <main>
+            <section>
+                <h3>
+                    conversor Celcius <br />
+                    >> <br />
+                    Fahrenheit
+                </h3>
+                <input type="text" placeholder="teperatura em celcius"
+                id=tempCelcius" min="0" required /><br />
+                <input
+                    type="submit"
+                    value="converter"
+                    onclick="converteParaFarenheit()"
+                /><br />
+                <input type="text" placeholder="temperatura
+Fahrenheit"id=tempFarenheit" min="0" required /><br />
+            </section>
+
+            <section>
+                <h3>registro BD</h3>
+                <input type="text" id="nome-usuario" placeholder="nome" />
+                <input type="text" id="telefone-usuario" placeholder="(00) 9 0000 0000" />
+                <input type="number" id="idade-usuario" placeholder="idade" />
+                <input type="button" value="salvar!" onclick="salvarInfo()" />
+            </section>
+            <section>
+                <h3>Pesquisa BD</h3>
+                <input
+                    type="text"
+                    id="pesquisa-nome-usuario"
+                    placeholder="Nome"
+                />
+                <input
+                    type="button"
+                    value="pesquisar"
+                    onclick="pesquisaPorNome()"
+                />
+                <input type="text" id="resultado-pesquisa" readonly />
+            </section>
+
+            <section>
+                <h3>Exibe Banco de Dados</h3>
+                <input type="button" value="Exibir" onclick="exibeBD()" />
+                <div id="lista-bd"></div>
+            </section>
+
+            <section>
+                <h3>Altera BD</h3>
+                <input type="text" id="nome-alteraçao" placeholder="Nome" />
+                <input type="number" id="idade-alteraçao" placeholder="Idade">
+                <button onclick="alteraInfo()">Alterar!</button>
+                <button onclick="excluiInfo()">Excluir!</button>
+            </section>
+        </main>
+    </body>
+</html>
