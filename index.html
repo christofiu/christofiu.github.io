@@ -30,16 +30,22 @@
                     onclick="converteParaFarenheit()"
                 /><br />
                 <input type="text" placeholder="temperatura
-Fahrenheit"id=tempFarenheit" min="0" required /><br />
+                Fahrenheit"id=tempFarenheit" min="0" required /><br />
             </section>
 
             <section>
                 <h3>registro BD</h3>
                 <input type="text" id="nome-usuario" placeholder="nome" />
-                <input type="text" id="telefone-usuario" placeholder="(00) 9 0000 0000" />
                 <input type="number" id="idade-usuario" placeholder="idade" />
+                <input
+                    type="tel"
+                    id="numero-usuario"
+                    placeholder="(88) 9 888888"
+                />
+                <input type="email" id="email-usuario" placeholder="E-mail" />
                 <input type="button" value="salvar!" onclick="salvarInfo()" />
             </section>
+            
             <section>
                 <h3>Pesquisa BD</h3>
                 <input
@@ -52,7 +58,18 @@ Fahrenheit"id=tempFarenheit" min="0" required /><br />
                     value="pesquisar"
                     onclick="pesquisaPorNome()"
                 />
-                <input type="text" id="resultado-pesquisa" readonly />
+                <input
+                    type="text"
+                    placeholder="telefone"
+                    id="resultado-pesquisa-telefone"
+                    readonly
+                />
+                <input
+                    type="text"
+                    placeholder="idade"
+                    id="resultado-pesquisa-idade"
+                    readonly
+                />
             </section>
 
             <section>
@@ -64,7 +81,7 @@ Fahrenheit"id=tempFarenheit" min="0" required /><br />
             <section>
                 <h3>Altera BD</h3>
                 <input type="text" id="nome-alteraçao" placeholder="Nome" />
-                <input type="number" id="idade-alteraçao" placeholder="Idade">
+                <input type="number" id="idade-alteraçao" placeholder="Idade" />
                 <button onclick="alteraInfo()">Alterar!</button>
                 <button onclick="excluiInfo()">Excluir!</button>
             </section>
